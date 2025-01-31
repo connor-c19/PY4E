@@ -1,15 +1,20 @@
 # PY4E
- - This repositiory will detail my progress in Python for Everybody, which I am using to learn more about Python, as well as program development in general.
 
- - Since this is an extracurricular pursuit, it will most likely only be worked on during school breaks.
+## About this project
+
+- This repositiory will detail my progress in [PY4E](https://www.py4e.com/)
+
+- My hopes are that this project not only serves as easily accessible reference material for my own programming endeavors, but can also provide a gentle introduction for any friends, family members, or others who may be interested in learning Python.
 
 ## Contents
-- Hello World
-- Practice with Expressions 
-- Try-Except 
+
+- Chapter 1
+  - Hello, World!
+- Practice with Expressions
+- Try-Except
 - Functions
 - Loops
 - String Manipulation
 - File Processing
-- Dictionaries 
+- Dictionaries
 - Sorted Tuples and Dictionaries
