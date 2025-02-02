@@ -56,7 +56,7 @@
 
 - Connects all of the things we mentioned above together
 
-# Python as a language
+# Python as a Language
 
 ## Python Backstory
 
@@ -74,7 +74,7 @@
 
 - Python doesn't hate you if this happens, it just means the interpreter cannot understand what you wanted to say
 
-# What do we say? (How do we start coding in Python?)
+# What Do We Say? (How do we start coding in Python?)
 
 ## Reserved Words
 
