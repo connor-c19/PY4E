@@ -11,7 +11,8 @@ Do not worry about error checking or bad user data.
 hrs = input("Enter Hours:")
 rate = input("Enter Hourly Rate:")
 pay = float(hrs) * float(rate)
-print(pay)
+#typecast pay back into string so it can be concatenated onto print string
+print("Pay: "+str(pay))
 
 
 
@@ -20,4 +21,4 @@ print(pay)
 ## NOTES ##
 # Desired input: 35
 # Desired input: 2.75
-# Desired output: 96.25
+# Desired output: "Pay: 96.25"

@@ -20,4 +20,4 @@ hrs = input("Enter Hours:")
 ## NOTES ##
 # Desired input: 35
 # Desired input: 2.75
-# Desired output: 96.25
+# Desired output: "Pay: 96.25"
