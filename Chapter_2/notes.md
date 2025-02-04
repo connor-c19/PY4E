@@ -105,7 +105,7 @@
 
 - One script can contain multiple different types of patterns as many times as you'd like, depending on it's intended function. The only limit is your creativity.
 
-# Chapter Exercises
+# A Word About Chapter Exercises
 
 - At the conclusion of each chapter, I'll include a copy of the PY4E coding assignments in the `exercises` folder. The questions will be in files named `Chapter_X_1.py` with corresponding answer files labled `Chapter_X_1_answer.py`.
 

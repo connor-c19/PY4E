@@ -2,7 +2,7 @@
 
 ## Constants
 
-- Constants are fixed values, such as: letters, numbers, or strings.
+- Constants are fixed values, such as letters, numbers, or strings.
 
   - `23`, `'c'`, `"cucumber"`
 
@@ -211,6 +211,6 @@
 
 - You shouldn't rely on comments to justify confusing code, though. Python is constructed in a way that even without comments, the meaning should be reasonably apparent. So if you have variable names that sound more like serial numbers than the real-world values they represent, consider restructuring your code to make it more readable.
 
-# Chapter Exercises
+# A Word About Chapter Exercises
 
 - For this (and future) chapter's exercises, you'll see that there is a `## PROMPT ##` section that details the goal of the script, and a `## NOTES ##` section with more comments below. These detail the certian inputs and outputs expected once the script has been corrected. Again, the goal is to correct the script so that when the user inputs the expected input, the script returns the expected output.

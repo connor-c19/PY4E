@@ -11,9 +11,11 @@
 - Chapter 1
   - [Start Here](/Chapter_1/notes.md)
 - Chapter 2
-  - [Why Program? - Hardware Architecture - Python as a Language - What Do We Say?](/Chapter_2/notes.md)
-  - [Exercises](/Chapter_2/exercises/hello_world.py)
-- Practice with Expressions
+  - [Why Program? - Hardware Architecture - Python as a Language - What Do We Say? - A Word About Chapter Exercises](/Chapter_2/notes.md)
+  - [Exercises](/Chapter_2/exercises/)
+- Chapter 3
+  - [Defining Values - Expressions - User Input - A Word About Chapter Exercises](/Chapter_3/notes.md)
+  - [Exercises](/Chapter_3/exercises/)
 - Try-Except
 - Functions
 - Loops
