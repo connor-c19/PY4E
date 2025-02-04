@@ -81,13 +81,13 @@
 - Words that already mean something in Python.
 
 - These words cannot be used as variable names or identifiers.
-  - I can't write a line that says 'if = 1', since the word 'if' is used by Python already. I can, however, write a line that says 'x = 1', since the word 'x' is NOT used by Python.
+  - I can't write a line that says `if = 1`, since the word `if` is used by Python already. I can, however, write a line that says `x = 1`, since the word `x` is NOT used by Python.
 
 ## Sentences
 
 - A program is a series of statements that are executed IN ORDER. (CPU does Line 1, Line 2, Line 3, etc...)
 
-- EX: 'x = x + 2' is a sentence (line) that assigns the value 'x' with itself + 2. (This code would only work if 'x' is defined in a previous line, such as 'x = 2')
+- EX: `x = x + 2` is a sentence (line) that assigns the value `x` with itself + 2. (This code would only work if `x` is defined in a previous line, such as `x = 2`)
 
 ## Python Scripts
 
@@ -104,3 +104,19 @@
   - Store-then-retrieve: A segment of code is stored under a name, and can be called at any point during the program. This mainly helps your code be more efficient, since otherwise you would have to write the same code in several different places if you needed it again.
 
 - One script can contain multiple different types of patterns as many times as you'd like, depending on it's intended function. The only limit is your creativity.
+
+# Chapter Exercises
+
+- At the conclusion of each chapter, I'll include a copy of the PY4E coding assignments in the `exercises` folder. The questions will be in files named `Chapter_X_1.py` with corresponding answer files labled `Chapter_X_1_answer.py`.
+
+- If you don't want to deal with the hassle of copying over files every chapter, you can use the CLI to create a **copy** of this repository:
+
+  - If you're on MacOS, download git with `brew install git`
+  - If you're on Windows (WSL) or Linux (Ubuntu), download git with `apt-get install git`
+  - Ensure you're in the `PY4E` folder that you created in the last chapter. Then, run the following command: `git clone https://github.com/connor-c19/PY4E.git .` This will clone this repository into your current folder (that's what the `.` represents at the end of the command).
+  - Tada! You've got all of my stuff now. If you're curious about using Git for your own code, I highly suggest you spend some time reading on [Git's website](https://git-scm.com/).
+
+- Similar to how we ran our `hello_world.py` script in the last chapter, we will run our script using the CLI once we've made the proper adjustments. It would probably be best to navigate to this chapter's `exercises` folder using the CLI before you begin running the `Chapter_2_1.py` file. This isn't absolutely necessary, but it makes it much easier since the necessary command to run the script is now:
+  - `python3 Chapter_2_1.py`
+    instead of
+  - `python3 Chapter_2/exercises/Chatper_2_1.py`
