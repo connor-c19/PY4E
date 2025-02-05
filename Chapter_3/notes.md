@@ -1,216 +1,154 @@
-# Defining Values
+# Conditional Steps
 
-## Constants
+- In chapter 1, we mentioned conditional scripts, or scripts with certain parts that run only when a criteria is set. In this chapter, we look at how to implement such a script.
 
-- Constants are fixed values, such as letters, numbers, or strings.
+## Boolean type
 
-  - `23`, `'c'`, `"cucumber"`
+- Since we are looking at conditional statements, we need to have a way to represent if a certian criteria is met (or not) in order to run code. This can be accomplished with the **boolean** type, which consists of two values: `True` or `False`.
 
-- Letters and strings can be defined with `''` or `""` (they are interchangeable), while numbers are simply entered in as they appear.
+- Once a variable is assigned a `True` or `False` value, it becomes a `bool`:
 
-## Reserved words
+  - `value1 = True`
+  - `type(value1)`
+  - <class 'bool'>
 
-- Constants can be assigned a named place in memory. However, there are some names that are off limits. These are called <strong>reserved words</strong>.
+## Comparison operators
 
-- Some examples include: `if`, `None`, `while`,`break` etc.
+- We can also produce such boolean values with **comparison operators**, which compare two values and result in either a `True` or `False` value:
 
-## Variables
+  - `1 > 0`
+  - True
 
-- Constants that have been allocated a named piece of memory are called <strong>variables</strong>.
+- The `>` and `<` operators represent greater-than and less-than:
 
-  - `variable1 = "cucumber"`
+  - `print(1 > 2)`
+  - False
+  - `print(1 < 2)`
+  - True
 
-- Once variables are defined, they can have their contents changed later on:
+- The `>=` and `<=` operators are greater-than/less-than or equal to:
 
-  - `variable2 = "pie"`
-  - `print(variable2)`
-  - pie
-  - `variable2 = "cake"`
-  - `print(variable2)`
-  - cake
+  - `print(1 >= 2)`
+  - False
+  - `print(1 >= 1)`
+  - True
 
-- There are a few rules for naming variables:
+- The `==` is an equivalence checker, while `!=` checks if two items are **not** equal to each other.
 
-  - They must start with letter or underscore. Ideally, you would just use a letter at the start.
+  - `print('a' == 'c')`
+  - False
+  - `print('a' != 'c')`
+  - True
 
-  - They must only consist of letters, numbers, and underscores.
+- You probably noticed that I used strings in the last set of examples. Comparison operators are not just compatible with numbers, but can be used with strings as well. The `==` is commonly used to evaluate whether or not two strings are the same. As for the `>` `<` `>=` `<=` operators, they evaluate based off of the **first** index position of the string. For example:
 
-  - Variable names are case sensitive, meaning that `dog` and `Dog` would be considered two different variables.
+  - `print('a' < 'c')`
+  - True
+  - `print('apple' < 'carrot')`
+  - True
 
-  - It's best practice to use Mnemonic variable names, or names that are easy to remember and correlate to their value, but they can be whatever you want. Python won't care what variable name you use, as long as it isn't a reserved word.
+- When comparing the first character of one string witht the first character of another string, Python looks for the [Unicode](https://unicodelookup.com/#latin/1) value for each character and makes the appropriate comparison. That's why you can have a valid comparison done between `a` (Unicode value `97`) and `c`(Unicode value `99`), or `apple` and `carrot`.
 
-- When assigning variables: we can even use expressions with other variables:
+## If statements
 
-  - `x = 43`
-  - `y = 2`
-  - `z = x * y`
-  - `print(z)`
-  - 86
+- Now that we understand Boolean values and how to produce them using comparison operators, we can begin to make our code **conditional** with the help of the `if` statement:
 
-# Expressions
+  - `if x == 0:`
+  - &nbsp;&nbsp;&nbsp;&nbsp;`print("Hi")`
 
-## Numeric expressions
+- Notice how the second line is farther right than the first line. Since `print("Hi")` is indented once more than `if x == 0:`, `print("Hi")` will run **ONLY IF** `x == 0` evaluates to be `True`. For example:
 
-- As you probably noticed in the section above, we can do math with numbers we have defined! While there are libraries out there that do additional calculation, our standard Python operators are: `+` `-` `*` `/` `**` `%` `//`
+  - `x = 0`
+  - `if x == 0:`
+  - &nbsp;&nbsp;&nbsp;&nbsp;`print("Hi")`
+  - Hi
 
-- The `+` and `-` operators do pretty much what you'd expect:
+- If `x` is not 0, then the code indented under the `if` statement won't run:
 
-  - `print(4+2)`
-  - 6
-  - `print(4-2)`
-  - 2
+  - `x = 1`
+  - `if x == 0:`
+  - &nbsp;&nbsp;&nbsp;&nbsp;`print("Hi")`
 
-- The `*` operator multiplies numbers together:
+- Nothing is printed out because the value of `x` is `1`, causing `if x == 0` to return `False`.
 
-  - `print(4*2)`
-  - 8
+## Else statements
 
-- The `**` is the exponential operator:
+- With `else` statements, we can now provide an alternative to our `if` statements:
 
-  - `print(4**2)`
-  - 8
+  - `x = 1`
+  - `if x == 0:`
+  - &nbsp;&nbsp;&nbsp;&nbsp;`print("Hi")`
+  - `else:`
+  - &nbsp;&nbsp;&nbsp;&nbsp;`print("Goodbye")`
+  - Goodbye
 
-- In order to determine how the `/` `%` `//` operators work, let's breifly discuss <strong>type</strong> in Python.
+- When `if x == 0` produces a `False` value, Python looks for an `else` statement to run instead. If one exists, then the code indented under that statement will run.
 
-## Type
+## Elif statements
 
-- We breifly touched on type earlier when we discussed defining different sorts of constants. Type is what it sounds like: the <strong>type</strong> of value that a constant or variable is. Let's run through a few types:
+- Using `elif` statements, we can create scripts that check a value against multiple criteria:
 
-  - <strong>int</strong>: Integers in Python are stored as this type.
+  - `x = 1`
+  - `if x == 0:`
+  - &nbsp;&nbsp;&nbsp;&nbsp;`print("Hi")`
+  - `elif x == 1:`
+  - &nbsp;&nbsp;&nbsp;&nbsp;`print("Nice to see you again")`
+  - `else:`
+  - &nbsp;&nbsp;&nbsp;&nbsp;`print("Goodbye")`
+  - Nice to see you again
 
-    - Ex: `4`
+- Notice that the `else` statement didn't run. This is because `elif` is short for **else-if**, meaning that if the original `if` statement returns `False`, then any `elif` statements will be checked. If they **all** return `False`, then the `else` statement will be run. Otherwise, the first `elif` statement to return `True` will have it's code ran, and all of the other `elif` statements and `else` statement will be skipped:
 
-  - <strong>float</strong>: Similair to integers, but instead of a value being stored as a single digit, it's stored as a decimal, or [floating point value](https://learn.microsoft.com/en-us/cpp/c-language/type-float?view=msvc-170).
-
-    - Ex: `4.0`, `3.65`, or `22.222222`.
-
-  - <strong>str</strong>: Single characters to large strings of text are stored as this type. Strings are denoted by using either `''` or `""`, either one will do.
-
-    - Ex: `"c"`, `'Python'`, or `"Man, I love Python!"`
-
-  - There are more types in Python, but these should enough for the rest of this chapter.
-
-- You can check what type of value a variable contains by using the `type()` function:
-
-  - `type(4)`
-  - <class 'int'>
-  - `type(4.0)`
-  - <class 'float'>
-  - `type('c')`
-  - <class 'str'>
-
-- Also, sometimes the type of a variable can be changed. This is called <strong>typecasting</strong>:
-  - `var1 = 4`
-  - `type(var1)`
-  - <class 'int'>
-  - `var1 = float(var1)`
-  - `type(var1)`
-  - <class 'float'>
-
-## Back to numeric expressions
-
-- Now that we understand types in Python, let's cover how the `/` `%` `//` operators work.
-
-- The `/` operator performs float division. Even if you divide one integer by another, the result will always be a float:
-
-  - `print(4/2)`
-  - 2.0
-  - `print(2/4)`
-  - 0.5
-  - `print(1/3)`
-  - 0.3333333333333333
-
-- The `%` operator returns the remainder of a division operation:
-
-  - `print(4%2)`
-  - 0
-  - `print(2%4)`
-  - 2
-  - `print(1%3)`
-  - 1
-
-- The `//` operator is the same as the `/` operator, but truncates the result. This means that if you end up with a decimal after dividing two numbers, say: `0.99`, then you can expect `0` as a result. If the result is initially `4.23` with the `/` operator, then the result would be `4` with the `//` operator:
-
-  - `print(4//2)`
-  - 2
-  - `print(2//4)`
-  - 0
-  - `print(4//3)`
-  - 1
-
-- The `()` characters act as they would in a normal math expression:
-
-  - `print(2 * (4 + 3) )`
-  - 14
-
-- As with regular math, some operators have precedence over others. `()` are always executed first, with the following operators having descending precedence:
-
-  - `**`
-  - `*` or `/`, `%`, and `//`
-  - `+` or `-`
-  - Operators of equal precedence are evaluated left to right.
-
-- Interestingly enough, you can use the `+` operator to concatenate, or combine, two strings:
-  - `print("Hello" + "World")`
-  - HelloWorld
-  - `print("Good " + "Bye")`
-  - Good Bye
-
-# User input
-
-- By now, we should be pretty familiar with the `print()` function. We've seen how it gives our programs a way to <strong>output</strong> information for the user. Believe it or not, there exists a similar function that gives users a way to <strong>input</strong> information for our program to use with the `input()` function. Here's how it's used:
-
-  - `name = input("hello there, what is your name?")`
-  - hello there, what is your name?
-  - ->>> Charlie
-  - `print("Hello, "+ name)`
-  - Hello, Charlie
-
-- Let's break that down line by line:
-
-  - `name = input("hello there, what is your name?")`
-    - `name` is a variable we are using to store what the `input()` function grabs from the CLI.
-    - `input("hello there, what is your name?")` is the `input()` function that grabs what a user types in the CLI. A message can be initialized to show when user input is required, like `"hello there, what is your name?"`, by putting it inside of the `input()` function.
-  - hello there, what is your name?
-    - This is the message printed out on the CLI, indicating that user input is required. This is another example of <strong>output</strong>.
-  - ->>>Charlie
-    - This is what the user typed in the CLI. From now on, I'll use `->>>` to indicate when a user is typing something in the CLI.
-  - `print("Hello, "+ name)`
-    - This `print()` function takes the result from the previous `input()` function and adds it to the end of the string `"Hello, "`, then outputs it to the CLI to make it look like our program is greeting the user.
-  - Hello, Charlie
-    - This is simply the result of the previous line.
-
-- One important thing to note about the `input()` function is that even if the user types in a number, the `input()` function will return it as a string. For example:
-
-  - `num1 = input("Please type in your favorite number")`
-  - Please type in your favorite number
-  - ->>> 42
-  - `type(num1)`
-  - <class 'str'>
-
-- In order to do numerical operations on a user input, we can use typecasting to convert the input to the type we need it to be in:
-  - `num_fav = input("Please type in your favorite number, then I will increment it")`
-  - Please type in your favorite number, then I will increment it
-  - ->>> 42
-  - `num_fav = int(num_fav)`
-  - `num_fav = num_fav + 1`
-  - `print(num_fav)`
-  - 43
-
-## Comments
-
-- Now that we are starting to get into programs that actually do something, most developers use a tool that helps them plan and organize their code. This tool is known as the <strong>comment</strong>, and is pretty much exactly what it sounds like: a way for developers to leave little hints, notes, or messages in their code. Comments are denoted by using the `#` character. Here's an example of how one might be used:
-
-  - `#Takes in user's name, prints greeting`
-  - `name = input("hello there, what is your name?")`
-  - `print("Hello, "+ name)`
-
-- As you can see, the three lines of code above compose a script that takes in user input, then prints it out in the form of a greeting. You'll notice that the first line starts with a `#`, denoting a comment. The cool thing about comments is you can say **whatever** you want in them. As long as there is a `#` character before what you said, the Python interpreter won't see it, and more importantly, won't throw any syntax errors.
-
-- While you wouldn't want to overdo it, using comments is considered best practice when constructing Python scripts so that other developers who want to read, rewrite, or use your code can understand what is happening.
-
-- You shouldn't rely on comments to justify confusing code, though. Python is constructed in a way that even without comments, the meaning should be reasonably apparent. So if you have variable names that sound more like serial numbers than the real-world values they represent, consider restructuring your code to make it more readable.
-
-# A Word About Chapter Exercises
-
-- For this (and future) chapter's exercises, you'll see that there is a `## PROMPT ##` section that details the goal of the script, and a `## NOTES ##` section with more comments below. These detail the certian inputs and outputs expected once the script has been corrected. Again, the goal is to correct the script so that when the user inputs the expected input, the script returns the expected output.
+  - `x = 1`
+  - `if x == 0:`
+  - &nbsp;&nbsp;&nbsp;&nbsp;`print("Hi")`
+  - `elif x == 1:`
+  - &nbsp;&nbsp;&nbsp;&nbsp;`print("Nice to see you again")`
+  - `elif x == 2:`
+  - &nbsp;&nbsp;&nbsp;&nbsp;`print("Howdy")`
+  - `elif x == 3:`
+  - &nbsp;&nbsp;&nbsp;&nbsp;`print("Howdy Pardner")`
+  - `else:`
+  - &nbsp;&nbsp;&nbsp;&nbsp;`print("Goodbye")`
+  - Nice to see you again
+
+# Error Handling
+
+- Ath this point, I'm sure you've ran into at least one [exception](https://docs.python.org/3/tutorial/errors.html#exceptions). An exception is simply an error that appears while our Python script is running. Here's an example:
+
+  - `float('hello')`
+  - Traceback (most recent call last):<br>File "\<stdin>", line 1, in \<module><br>ValueError: could not convert string to float: 'hello'
+
+- In the first line, I attempted to convert the string `'hello'` into a `float`, which ultimately resulted in an error since `'hello'` is not a number. The second line details the error that the first line produced. If we were to correct the script to the one displayed below, we should **not** produce an error:
+
+  - `float('42')`
+  - 42.0
+
+- Luckily for us, `try` and `except` statements allow us to decide which code to run when an exception occurs. Similair to `if` and `else`, `try` blocks attempt to run potentially problematic code. If such code throws an exception, the Python code stops at the line of code that produces an error and instead begins to run the code listed in the `except` block. Otherwise, it completes the code in the `try` block, and skips over the `except` block. Here's an example:
+
+  - `x = "four"`
+  - `try:`
+  - &nbsp;&nbsp;&nbsp;&nbsp;`float(x)`
+  - &nbsp;&nbsp;&nbsp;&nbsp;`print('Success!')`
+  - `except`:
+  - &nbsp;&nbsp;&nbsp;&nbsp;`print('Failure!')`
+  - `print("All done")`
+  - Failure!
+  - All done
+
+- In the `try` block, we attempted to typecast `x` to a `float`. Since `x` contained the value `"four"`, the line `float(x)` threw an exception. This caused Python to skip over the rest of the `try` block and run the `except` block code. Then last line `print("All done")` is run. Let's fix our code so it doesn't cause an error:
+
+  - `x = "4"`
+  - `try:`
+  - &nbsp;&nbsp;&nbsp;&nbsp;`float(x)`
+  - &nbsp;&nbsp;&nbsp;&nbsp;`print('Success!')`
+  - `except`:
+  - &nbsp;&nbsp;&nbsp;&nbsp;`print('Failure!')`
+  - `print("All done")`
+  - 4.0
+  - Success!
+  - All done
+
+- Even though `"4"` is a string, it **only** contains numbers, so typecasting it to a `float` is valid. Since `float(x)` did not throw an error, Python was able to run the remainder of the code in the `try` block before skipping over the `except` block. The last line, `print("All done")`, is still ran because it is not indented under the `except` block.
+
+- Handling errors is especially important for developers because it gives us a chance to keep our scripts running, even if something doesn't behave the way it's supposed to.

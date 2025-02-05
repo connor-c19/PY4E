@@ -8,15 +8,25 @@
 
 ## Contents
 
+- Chapter 0
+
+  - [Start Here](/Chapter_0/notes.md)
+
 - Chapter 1
-  - [Start Here](/Chapter_1/notes.md)
+
+  - [Why Program? - Hardware Architecture - Python as a Language - What Do We Say? - A Word About Chapter Exercises](/Chapter_1/notes.md)
+  - [Exercises](/Chapter_1/exercises/)
+
 - Chapter 2
-  - [Why Program? - Hardware Architecture - Python as a Language - What Do We Say? - A Word About Chapter Exercises](/Chapter_2/notes.md)
+
+  - [Defining Values - Expressions - User Input - A Word About Chapter Exercises](/Chapter_2/notes.md)
   - [Exercises](/Chapter_2/exercises/)
+
 - Chapter 3
-  - [Defining Values - Expressions - User Input - A Word About Chapter Exercises](/Chapter_3/notes.md)
+
+  - [Conditional Steps - Error Handling](/Chapter_3/notes.md)
   - [Exercises](/Chapter_3/exercises/)
-- Try-Except
+
 - Functions
 - Loops
 - String Manipulation

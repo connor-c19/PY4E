@@ -1,59 +1,122 @@
-# Start Here
+# Why Program?
 
-If you're reading this, then you are most likely a friend, family member, or other that I have insisted learn Python. In order to get set up for the PY4E course, there are a few steps we have to go through first. For some key concepts and instructions, I have included a hyperlink that provides either additional information, steps, or documentation that might be helpful.
+## Philosophy behind learning to program
 
-These steps will ensure that we have a proper development environment for not only the course, but for your future programming adventures.
+- It's necessary to learn how computers work due to their everyday importance. (They're literally everywhere!)
 
-I am advocating for the use of a [UNIX environment](https://ccrma.stanford.edu/guides/planetccrma/Unix_Environment.html). In my opinion, using a UNIX environment can help streamline development by providing a much more robust and efficient platform to construct and deploy your code. By no means is this a requirement, it's simply my recommendation for this tutorial.
+- In order to do this, we must transition from user to programmer, or view our devices FROM the inside TO the outside.
 
-## Step 1: Environment (macOS/Linux):
+## Why be a programmer?
 
-1. If you are using macOS, go ahead and open up the [Terminal](https://support.apple.com/guide/terminal/open-or-quit-terminal-apd5265185d-f365-44cb-8b09-71a064a42125/mac). Otherwise, in your Linux machine, navigate to the Command Line Interface (CLI).
+- Learn some tools to make solving an arbitrary task easier, or to solve a problem for yourself.
 
-2. Read through some of the [CLI commands](https://www.geeksforgeeks.org/basic-linux-commands/). See if you can figure out how to create a folder named "PY4E" on your desktop using only the CLI.
-   - (Hint: You will have to use the commands `cd` and `mkdir` to accomplish this)
+- On a larger scale, create something that others can use, either as a creative outlet or to pay the bills. (Think open source projects for the former, Software Engineering for the latter)
 
-## Step 1: Environment (Windows):
+## What is code?
 
-1. On a Windows machine, a UNIX environment isn't readily available. One of the most straightforward ways to initialize one would be to [install Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/install#install-wsl-command). WSL allows for the quick and easy set up of a Linux environment without the hassle of dealing with virtual machines or dual-booting.
+- A sequence of stored instructions that can be run at any time within a computer.
 
-2. Once you have installed WSL, read through some of the [CLI commands](https://www.geeksforgeeks.org/basic-linux-commands/). See if you can figure out how to create a folder named "PY4E" on your desktop using only the CLI.
-   - (Hint: You will have to use the commands `cd` and `mkdir` to accomplish this)
+- Syntax is important! Any error made in source code can't be interpreted by the computer, only explicit instructions work.
 
-## Step 2: Installing Python
+# Hardware Architecture
 
-1. If you're planning to do this course on macOS, then I suggest following [this article](https://www.geeksforgeeks.org/how-to-install-python-on-mac/#how-to-install-python-3131-on-macos-using-homebrew) for installing Python.
+## CPU
 
-   - If you're planning to do this course on Windows or Linux, enter `sudo apt install python3`. This will install Python.
+- Arguably the computer part with the healthiest work ethic.
+- Essentially asks "Whats the next instruction" 3-6 billion times a second. (Depending on the computer)
+- Can only do one process at a time (not actually, but lets pretend for now), but is useful because it can execute 3-6 billion processes a second.
 
-2. Once Python is installed, run `python3` in the CLI. You shoud now see an output similar to the following:
+## Main memory (RAM)
 
-   `Python 3.10.12 (main, Jan 17 2025, 14:35:34) [GCC 11.4.0] on linux`<br>
-   `Type "help", "copyright", "credits" or "license" for more information.`<br>
-   `>>> `
+- Acts as immediate storage, it feeds the CPU with instructions. (Answers the "What's next" question)
 
-## Step 3: Installing Visual Studio Code
+- Super fast access time for the CPU, but is also expensive, and doesn't have nearly as much storage as the secondary storage. (Hard drive)
 
-1. Visual Studio Code is an Integrated Development Environment, or IDE. An IDE makes it a lot easier to write code since it supports a variety of features, such as auto-complete, version control, and more. [Here](https://code.visualstudio.com/download#) is where you can find the VSCode download link for your specific device.
+- If you lose power, all of the data in RAM is lost.
 
-   - If you're on Windows, also install the WSL extension which can be found in [this article](https://code.visualstudio.com/docs/remote/wsl-tutorial).
+- Where your program that you wrote is stored while it is running.
 
-2. Once VSCode has been downloaded, navigate to the Extensions tab on the left-hand icon pane. In the search bar that appears near the top left, enter `Python`. Once you find the similarly named extension by Microsoft (it might not be the top result), select it and click install.
+  - Your code is transformed from Python (the programming language) to 1's and 0's (machine language) that can be understood by the CPU.
 
-3. Once that is installed, we should be ready to write our first line of Python code! Go ahead and close VSCode. From here on out, we will be launching VSCode from the command line.
+## Hard drive (Secondary Storage)
 
-## Step 4: Hello World
+- Your programs (along with everything esle) are stored here before being 'copied' to RAM to be ran by the CPU.
 
-1. Assuming everything went well with the previous steps, we should be ready to make sure everything works! In the CLI, navigate to the "PY4E" folder you created in Step 1.
+- Much slower access time, but much more space!
 
-2. Once you've made it there, type `code .` and press enter. This should launch VSCode inside of our current folder. To check, if we press the first icon on the left-hand pane (it looks like two overlapping files), we should see that we are inside our empty "PY4E" folder once the 'EXPLORER' menu opens. In order to access the CLI in VSCode, navigate to 'Terminal' in the top left, and select 'New Terminal'. You should now have two different ways to view the files and sub-folders of your current folder.
+- Unlike RAM, your computer could lose power and all of your data remains intact.
 
-3. This may be getting ahead of ourselves, but lets try to write and run our very first Python script. In 'EXPLORER', right-click and select 'New File'. Let's title it `hello_world.py`.
+## Input Devices/Output Devices (I/O)
 
-4. Click on 'hello_world.py' and type `print("Hello, world!")`. Save the file, and click on the awaiting terminal on the bottom of the screen.
+- Input devices allow for user input; think keyboard, mouse, trackpad, microphone, camera, etc.
 
-5. Enter `python3 hello_world.py` and you should expect to see the following output:<br>
-   `Hello, world!`<br>
-   Pretty cool, right?!<br>
+- Output devices allow for the computer to display data; think screens, speakers, lights, etc.
 
-You are now ready to continue on with the course. I hope you enjoy learning Python, and do amazing things with your newfound programming ability after the tutorial.
+## Motherboard
+
+- Connects all of the things we mentioned above together
+
+# Python as a Language
+
+## Python Backstory
+
+- Invented by Guido van Rossum in 1991, the name comes from Monty Python's Flying Circus
+
+- Was designed to be a fun, approachable language that is powerful enough under the hood to complete complex tasks.
+
+- Readability is king for Python, meaning that it was created to make code that is easy to understand without excessive scrutiny. (That means that even you or I could begin to understand it at our current point in this course)
+
+## Syntax Errors
+
+- A mistake that is made when the rules of the coding language are not followed
+
+- Python is read by an interpreter that expects you to follow certain rules when writing a program.
+
+- Python doesn't hate you if this happens, it just means the interpreter cannot understand what you wanted to say
+
+# What Do We Say? (How do we start coding in Python?)
+
+## Reserved Words
+
+- Words that already mean something in Python.
+
+- These words cannot be used as variable names or identifiers.
+  - I can't write a line that says `if = 1`, since the word `if` is used by Python already. I can, however, write a line that says `x = 1`, since the word `x` is NOT used by Python.
+
+## Sentences
+
+- A program is a series of statements that are executed IN ORDER. (CPU does Line 1, Line 2, Line 3, etc...)
+
+- EX: `x = x + 2` is a sentence (line) that assigns the value `x` with itself + 2. (This code would only work if `x` is defined in a previous line, such as `x = 2`)
+
+## Python Scripts
+
+- A python script is created when you put a series of python instructions into a file (with the .py extension) that can be called and run later.
+
+- Scripts have a few patterns they can follow:
+
+  - Sequential: The script consists only of instructions that are executed in the order that they appear
+
+  - Conditional: The script contains an 'if' statement, where some parts of the code are run only if a certain parameter is met
+
+  - Repeated: The script contains a block of code that runs repeatedly. How many times it will run is usually determined by a variable, which we will look at later.
+
+  - Store-then-retrieve: A segment of code is stored under a name, and can be called at any point during the program. This mainly helps your code be more efficient, since otherwise you would have to write the same code in several different places if you needed it again.
+
+- One script can contain multiple different types of patterns as many times as you'd like, depending on it's intended function. The only limit is your creativity.
+
+# A Word About Chapter Exercises
+
+- At the conclusion of each chapter, I'll include a copy of the PY4E coding assignments in the `exercises` folder. The questions will be in files named `Chapter_X_1.py` with corresponding answer files labled `Chapter_X_1_answer.py`.
+
+- If you don't want to deal with the hassle of copying over files every chapter, you can use the CLI to create a **copy** of this repository:
+
+  - If you're on MacOS, download git with `brew install git`
+  - If you're on Windows (WSL) or Linux (Ubuntu), download git with `apt-get install git`
+  - Ensure you're in the `PY4E` folder that you created in the last chapter. Then, run the following command: `git clone https://github.com/connor-c19/PY4E.git .` This will clone this repository into your current folder (that's what the `.` represents at the end of the command).
+  - Tada! You've got all of my stuff now. If you're curious about using Git for your own code, I highly suggest you spend some time reading on [Git's website](https://git-scm.com/).
+
+- Similar to how we ran our `hello_world.py` script in the last chapter, we will run our script using the CLI once we've made the proper adjustments. It would probably be best to navigate to this chapter's `exercises` folder using the CLI before you begin running the `Chapter_2_1.py` file. This isn't absolutely necessary, but it makes it much easier since the necessary command to run the script is now:
+  - `python3 Chapter_2_1.py`
+    instead of
+  - `python3 Chapter_2/exercises/Chatper_2_1.py`

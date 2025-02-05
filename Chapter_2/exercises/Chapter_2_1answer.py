@@ -1,3 +1,8 @@
-# ANSWER:
-# the code below works
-print("hello world")
+# The code below works
+
+name = input("Enter your name")
+print("Hello "+name)
+
+## NOTES ##
+# Desired input: Sarah
+# Desired output: "Hello Sarah"
