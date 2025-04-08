@@ -1,6 +1,6 @@
 # Conditional Steps
 
-- In chapter 1, we mentioned conditional scripts, or scripts with certain parts that run only when a criteria is set. In this chapter, we look at how to implement such a script.
+In chapter 1, we mentioned conditional scripts, or scripts with certain parts that run only when a criteria is set. In this chapter, we look at how to implement such a script.
 
 ## Boolean type
 

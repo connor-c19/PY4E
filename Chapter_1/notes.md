@@ -1,5 +1,7 @@
 # Why Program?
 
+What is Python, and why should we learn how to use it?
+
 ## Philosophy behind learning to program
 
 - It's necessary to learn how computers work due to their everyday importance. (They're literally everywhere!)

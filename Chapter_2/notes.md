@@ -1,5 +1,7 @@
 # Defining Values
 
+In order to write a script that can take in and manipulate data, we need a way to define and store values to be used later.
+
 ## Constants
 
 - Constants are fixed values, such as letters, numbers, or strings.
@@ -162,7 +164,7 @@
 
 - By now, we should be pretty familiar with the `print()` function. We've seen how it gives our programs a way to <strong>output</strong> information for the user. Believe it or not, there exists a similar function that gives users a way to <strong>input</strong> information for our program to use with the `input()` function. Here's how it's used:
 
-  - `name = input("hello there, what is your name?")`
+  - `name = input("hello there, what is your name?\n")`
   - hello there, what is your name?
   - ->>> Charlie
   - `print("Hello, "+ name)`
@@ -172,7 +174,8 @@
 
   - `name = input("hello there, what is your name?")`
     - `name` is a variable we are using to store what the `input()` function grabs from the CLI.
-    - `input("hello there, what is your name?")` is the `input()` function that grabs what a user types in the CLI. A message can be initialized to show when user input is required, like `"hello there, what is your name?"`, by putting it inside of the `input()` function.
+    - `input("hello there, what is your name?\n")` is the `input()` function that grabs what a user types in the CLI. A message can be initialized to show when user input is required, like `"hello there, what is your name?\n"`, by putting it inside of the `input()` function.
+    - `\n` is the newline character. This tells the CLI to jump to a new line after whatever is before it is printed. It's not necessary to use, but it looks a bit nicer than having the user type their response on the same line as the input text.
   - hello there, what is your name?
     - This is the message printed out on the CLI, indicating that user input is required. This is another example of <strong>output</strong>.
   - ->>>Charlie
@@ -184,14 +187,14 @@
 
 - One important thing to note about the `input()` function is that even if the user types in a number, the `input()` function will return it as a string. For example:
 
-  - `num1 = input("Please type in your favorite number")`
+  - `num1 = input("Please type in your favorite number\n")`
   - Please type in your favorite number
   - ->>> 42
   - `type(num1)`
   - <class 'str'>
 
-- In order to do numerical operations on a user input, we can use typecasting to convert the input to the type we need it to be in:
-  - `num_fav = input("Please type in your favorite number, then I will increment it")`
+- In order to do numerical operations on a user input, we can use **typecasting** to convert the input to the type we need it to be in:
+  - `num_fav = input("Please type in your favorite number, then I will increment it\n")`
   - Please type in your favorite number, then I will increment it
   - ->>> 42
   - `num_fav = int(num_fav)`
@@ -204,7 +207,7 @@
 - Now that we are starting to get into programs that actually do something, most developers use a tool that helps them plan and organize their code. This tool is known as the <strong>comment</strong>, and is pretty much exactly what it sounds like: a way for developers to leave little hints, notes, or messages in their code. Comments are denoted by using the `#` character. Here's an example of how one might be used:
 
   - `#Takes in user's name, prints greeting`
-  - `name = input("hello there, what is your name?")`
+  - `name = input("hello there, what is your name?\n")`
   - `print("Hello, "+ name)`
 
 - As you can see, the three lines of code above compose a script that takes in user input, then prints it out in the form of a greeting. You'll notice that the first line starts with a `#`, denoting a comment. The cool thing about comments is you can say **whatever** you want in them. As long as there is a `#` character before what you said, the Python interpreter won't see it, and more importantly, won't throw any syntax errors.

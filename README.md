@@ -27,7 +27,11 @@
   - [Conditional Steps - Error Handling](/Chapter_3/notes.md)
   - [Exercises](/Chapter_3/exercises/)
 
-- Functions
+- Chapter 4
+
+  - [Function Basics - Built in Functions](/Chapter_4/notes.md)
+  - [Exercises](/Chapter_4/exercises/)
+
 - Loops
 - String Manipulation
 - File Processing
