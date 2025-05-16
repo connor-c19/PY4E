@@ -24,7 +24,7 @@ In Chapter 1, we also mentioned store-then-retrieve code, or **functions**. Func
   - `myFunc()`
   - Hi there
 
-- We can invoke this function anytime we'd like, as many times as we want
+- We can invoke this function anytime we'd like, as many times as we want:
 
   - `myFunc()`
   - Hi there
@@ -36,8 +36,6 @@ In Chapter 1, we also mentioned store-then-retrieve code, or **functions**. Func
   - Hi there
   - `myFunc()`
   - Hi there
-
-won't run if we don't use (invoke) it
 
 - As you might expect, the code within a function is only ran when the function is invoked. If the function is never invoked, the code will not run:
 
@@ -75,7 +73,9 @@ won't run if we don't use (invoke) it
 
 ## Function Return
 
-- Functions can return values using the `return` keyword. This can be used to set the value of a variable:
+- Functions can return values using the `return` keyword. Functions that don't return a value are considered **void** functions. All of the function examples before this section were examples of this type, since they lacked a `return` keyword.
+
+- Functions with `return` can be used to set the value of a variable:
 
   - `def getName():`<br>
   - &nbsp;&nbsp;&nbsp;&nbsp;`username = input("What is your name?"\n)`
@@ -84,16 +84,16 @@ won't run if we don't use (invoke) it
   - `myName = getName()`
   - What is your name?
   - ->>> Thomas
-  - `print(name)`
+  - `print(myName)`
   - Thomas
 
-- It can also be used for `if` statements:
+- Functions with `return` can also be used as a parameter for `if` statements:
 
   - `def isEven(num):`<br>
   - &nbsp;&nbsp;&nbsp;&nbsp;`if num % 2 == 0: `
   - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`return True`
   - &nbsp;&nbsp;&nbsp;&nbsp; `else:`
-  - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `return False`
+  - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`return False`
   -
   - `myNum = 5`
   - `if isEven(myNum):`
@@ -102,9 +102,7 @@ won't run if we don't use (invoke) it
   - &nbsp;&nbsp;&nbsp;&nbsp;`print("Odd!")`
   - Odd!
 
-- Functions that don't return a value are considered **void** functions. All of the function examples before this section were examples of this type, since they lacked a `return` keyword.
-
-- If you have code after the `return` keyword in a function, it will not run. Once a function returns a value, it ceases to run:
+- If you have code after the `return` keyword in a function, it will not execute. A function will always stop with `return`:
 
   - `def countUp():`<br>
   - &nbsp;&nbsp;&nbsp;&nbsp;`print("1")`
@@ -127,7 +125,7 @@ won't run if we don't use (invoke) it
 
 ## Example: Min/Max functions
 
-- An example of a built in function, the `min()` function finds the minimum value in a list of items and returns it:
+- An example of a built in function, `min()` finds the minimum value in a list of items and returns it:
 
   - `myList = [2,3,4,5,1]`
   - `min(myList)`
@@ -143,13 +141,13 @@ won't run if we don't use (invoke) it
   - `ord('a')`
   - 97
 
-- The `max()` function does the opposite of the `min()` function:
+- The `max()` function does the opposite of `min()`:
 
   - `myList = [2,3,4,5,1]`
   - `max(myList)`
   - 5
 
-- It can also work with strings:
+- `max()` can also work with strings:
   - `myString = "abcA"`
   - `max(myString)`
   - 'a'
