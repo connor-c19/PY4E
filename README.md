@@ -32,7 +32,11 @@
   - [Function Basics - Built in Functions](/Chapter_4/notes.md)
   - [Exercises](/Chapter_4/exercises/)
 
-- Loops
+- Chapter 5
+
+- [Loops and Iteration](/Chapter_5/notes.md)
+- [Exercises](/Chapter_5/exercises/)
+
 - String Manipulation
 - File Processing
 - Dictionaries
