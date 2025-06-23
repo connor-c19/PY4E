@@ -37,7 +37,11 @@
 - [Loops and Iteration](/Chapter_5/notes.md)
 - [Exercises](/Chapter_5/exercises/)
 
-- String Manipulation
+- Chapter 6
+
+- [String Basics - String Object Methods](/Chapter_6/notes.md)
+- [Exercises](/Chapter_6/exercises/)
+
 - File Processing
 - Dictionaries
 - Sorted Tuples and Dictionaries
