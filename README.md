@@ -42,6 +42,11 @@
 - [String Basics - String Object Methods](/Chapter_6/notes.md)
 - [Exercises](/Chapter_6/exercises/)
 
-- File Processing
+- Chapter 7
+
+- [File Basics - Reading Files](/Chapter_7/notes.md)
+- [Exercises](/Chapter_7/exercises/)
+- [Additional Exercises](/Chapter_7/additional_exercises/)
+
 - Dictionaries
 - Sorted Tuples and Dictionaries
