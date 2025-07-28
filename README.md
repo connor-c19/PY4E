@@ -34,19 +34,24 @@
 
 - Chapter 5
 
-- [Loops and Iteration](/Chapter_5/notes.md)
-- [Exercises](/Chapter_5/exercises/)
+  - [Loops and Iteration](/Chapter_5/notes.md)
+  - [Exercises](/Chapter_5/exercises/)
 
 - Chapter 6
 
-- [String Basics - String Object Methods](/Chapter_6/notes.md)
-- [Exercises](/Chapter_6/exercises/)
+  - [String Basics - String Object Methods](/Chapter_6/notes.md)
+  - [Exercises](/Chapter_6/exercises/)
 
 - Chapter 7
 
-- [File Basics - Reading Files](/Chapter_7/notes.md)
-- [Exercises](/Chapter_7/exercises/)
-- [Additional Exercises](/Chapter_7/additional_exercises/)
+  - [File Basics - Reading Files](/Chapter_7/notes.md)
+  - [Exercises](/Chapter_7/exercises/)
+  - [Additional Exercises](/Chapter_7/additional_exercises/)
+
+- Chapter 8
+
+  - [List Basics](/Chapter_8/notes.md)
+  - [Exercises](/Chapter_8/exercises/)
 
 - Dictionaries
 - Sorted Tuples and Dictionaries
