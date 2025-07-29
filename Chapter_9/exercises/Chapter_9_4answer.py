@@ -10,7 +10,7 @@ After the dictionary is produced, the program reads through the dictionary
     using a maximum loop to find the most prolific committer.
 """
 
-# Use the file name romeo.txt as the file name
+# Use the file name mbox-short.txt as the file name
 
 name = input("Enter file:")
 if len(name) < 1:

@@ -58,4 +58,7 @@
   - [Dictionary Basics - Dictionary Usage](/Chapter_9/notes.md)
   - [Exercises](/Chapter_9/exercises/)
 
-- Sorted Tuples and Dictionaries
+- Chapter 10
+
+  - [Tuple Basics - Sorting Lists of Tuples](/Chapter_10/notes.md)
+  - [Exercises](/Chapter_10/exercises/)

@@ -37,13 +37,3 @@ for line in fh: print(line.rstrip())
     #   'through', 'what', 'window', 'with', 'yonder']
 
 
-
-
-
-
-
-
-
-## NOTES ##
-# Desired input: mbox-short.txt
-# Desired output: Average spam confidence: 0.7507185185185187
