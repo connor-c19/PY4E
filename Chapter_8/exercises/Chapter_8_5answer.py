@@ -24,15 +24,15 @@ count = 0
 
 #read file line by line.
 for line in fh:
-    #parse the From line using split()
-    words = line.split()
-    if len(words) > 1:
-        #print out the second word in the line (i.e. the entire address of the person who sent the message).
-        if words[0] == 'From':
-            email = words[1]
-            print(email)
 
-            count+=1
+    if 'From ' in line:
+    #parse the From line using split()
+        words = line.split()
+
+        email = words[1]
+        print(email)
+
+        count+=1
 
 #Then print out a count at the end.
 

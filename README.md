@@ -50,8 +50,12 @@
 
 - Chapter 8
 
-  - [List Basics](/Chapter_8/notes.md)
+  - [List Basics - List Usage](/Chapter_8/notes.md)
   - [Exercises](/Chapter_8/exercises/)
 
-- Dictionaries
+- Chapter 9
+
+  - [Dictionary Basics - Dictionary Usage](/Chapter_9/notes.md)
+  - [Exercises](/Chapter_9/exercises/)
+
 - Sorted Tuples and Dictionaries

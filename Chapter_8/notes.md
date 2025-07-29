@@ -6,6 +6,8 @@
 
 - List: initialized using [], can hold any permutation of any Python object
 
+# List Usage
+
 ## Iterating Through Lists
 
 - Lists are commonly looped through using `for` loops:
