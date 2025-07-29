@@ -62,3 +62,8 @@
 
   - [Tuple Basics - Sorting Lists of Tuples](/Chapter_10/notes.md)
   - [Exercises](/Chapter_10/exercises/)
+
+- Chapter 11
+
+  - [Regex Basics](/Chapter_11/notes.md)
+  - [Exercises](/Chapter_11/exercises/)
