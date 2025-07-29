@@ -67,3 +67,8 @@
 
   - [Regex Basics](/Chapter_11/notes.md)
   - [Exercises](/Chapter_11/exercises/)
+
+- Chapter 12
+
+  - [Network Basics - Text Processing - Helpful Libraries](/Chapter_12/notes.md)
+  - [Exercises](/Chapter_12/exercises/)
