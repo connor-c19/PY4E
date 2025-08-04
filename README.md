@@ -72,3 +72,8 @@
 
   - [Network Basics - Text Processing - Helpful Libraries](/Chapter_12/notes.md)
   - [Exercises](/Chapter_12/exercises/)
+
+- Chapter 13
+
+  - [Web Service Basics - XML - JSON - Service Oriented Approach](/Chapter_13/notes.md)
+  - [Exercises](/Chapter_13/exercises/)
