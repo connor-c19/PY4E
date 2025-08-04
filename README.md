@@ -77,3 +77,8 @@
 
   - [Web Service Basics - XML - JSON - Service Oriented Approach](/Chapter_13/notes.md)
   - [Exercises](/Chapter_13/exercises/)
+
+- Chapter 14
+
+  - [Object Oriented Programming Basics - Object Lifecycle - Inheritance](/Chapter_13/notes.md)
+  - [Exercises](/Chapter_13/exercises/)
