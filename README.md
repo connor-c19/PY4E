@@ -80,5 +80,10 @@
 
 - Chapter 14
 
-  - [Object Oriented Programming Basics - Object Lifecycle - Inheritance](/Chapter_13/notes.md)
-  - [Exercises](/Chapter_13/exercises/)
+  - [Object Oriented Programming Basics - Object Lifecycle - Inheritance](/Chapter_14/notes.md)
+  - [Exercises](/Chapter_14/exercises/)
+
+- Chapter 15
+
+  - [Database Basics - Multiple SQL Tables - Database Handout](/Chapter_15/notes.md)
+  - [Exercises](/Chapter_15/exercises/)

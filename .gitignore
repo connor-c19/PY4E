@@ -1,5 +1,5 @@
-./Chapter_12/exercises/bin/
-./Chapter_12/exercises/include/
-./Chapter_12/exercises/lib/
-./Chapter_12/exercises/lib64/
-./Chapter_12/exercises/pyvenv.cfg
+./*/exercises/bin/
+./*/exercises/include/
+./*/exercises/lib/
+./*/exercises/lib64/
+./*/exercises/pyvenv.cfg
