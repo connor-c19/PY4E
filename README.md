@@ -87,3 +87,9 @@
 
   - [Database Basics - Multiple SQL Tables - Database Handout](/Chapter_15/notes.md)
   - [Exercises](/Chapter_15/exercises/)
+
+- Chapter 16
+
+  - [Building Visualization Apps](/Chapter_16/notes.md)
+  - [Exercises](/Chapter_16/exercises/)
+  - [All Sample Code](/Chapter_16/all_sample_code/)
