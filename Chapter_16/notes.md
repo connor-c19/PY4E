@@ -8,14 +8,12 @@
 `https://www.py4e.com/code3.zip`
 
 - Web crawler, a computer program that browses the World Wide Web in a methodical, automated manner:
-
   - Retrieve a page
   - Look through the page for links
   - Add the links to a list of "to be retrieved" sites
   - Repeat
 
 - Web crawling policy:
-
   - Selection policy: which pages to download
   - re-visit policy: when to check for changes to the pages
   - politeness policy: how to avoid overloading websites
@@ -24,7 +22,8 @@
 - robots.txt: a way for web site to communicate with web crawlers, an informal and voluntary standard
 
 - Page rank: figure out which pages have the most 'best' links
-
   - Value is determined by how many links are within links on a page
+
+  - Page rank algorithm: developed by Google co-founder Larry Page
 
 - Search indexing: collects, parses, and stores data to facilitate fast and accurate information retrieval
