@@ -1,4 +1,5 @@
 import socket
+from time import sleep
 
 def create_socket(url: str, port: int) -> tuple[socket.socket, str]:
     ## initialize socket with address family/socket kind
@@ -18,6 +19,7 @@ def create_socket(url: str, port: int) -> tuple[socket.socket, str]:
 
     return (mysock, peername)
 
+
 def close_socket(mysock: socket.socket):
     try:
         mysock.shutdown(socket.SHUT_WR)
@@ -27,6 +29,7 @@ def close_socket(mysock: socket.socket):
 
     ## release resources associated with sockets
     mysock.close()
+
 
 def send_data(mysock: socket.socket, data: str) -> int:
     ## encode data into UTF-8
@@ -42,6 +45,7 @@ def send_data(mysock: socket.socket, data: str) -> int:
 
     return lensentdatatotal
 
+
 def recieve_data(mysock: socket.socket) -> tuple[str, str]:
     ## loop through recieve cycles until data is fully recieved
     message = ""
@@ -56,13 +60,14 @@ def recieve_data(mysock: socket.socket) -> tuple[str, str]:
         if len(datachunk) < 4098:
             break
 
-    return (message, address)
+    return (message.strip(), address)
+
 
 if __name__ == '__main__':
     ## create client socket and connect to server
-    url = input("What url would you like to connect to? (leave blank for internal):\n")
-    if url == '':
-        url = "localhost"
+    #url = input("What url would you like to connect to? (leave blank for internal):\n")
+    #if url == '':
+    url = "localhost"
 
     port = int(input("What port would you like to connect to?:\n"))
 
@@ -77,7 +82,10 @@ if __name__ == '__main__':
         if data != "close":
             #### send data
             lensentdata = send_data(mysock, data)
-            print(f"Sent: {data}\n of length: {lensentdata}\n to host: {peername}\n")
+            print(f"Sent: {data}\n of length: {lensentdata}\n to host: {peername}\n")            
+
+            #### wait for data to hit server
+            sleep(1)
 
             #### recieve data
             message, address = recieve_data(mysock)
